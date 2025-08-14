@@ -10,11 +10,11 @@ paths:
   /hello:
     get: 
       summary: Holi, mundillo ;) 
-      response: 
+      responses: 
         '200':
           description: A successful response
-          constent: 
-            aplication/json: 
+          content: 
+            application/json: 
               schema: 
                 $ref: '#/components/schemas/HelloResponse'
 components: 
