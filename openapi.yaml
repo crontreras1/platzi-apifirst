@@ -6,7 +6,23 @@ info:
   description: API first
 servers: 
   - url: http://localhost:3000
+components: 
+  schemas: 
+    Home: 
+      type: object
+    HelloResponse: 
+      type: object
 paths: 
+  /:
+    get: 
+      summary: Raiz del proyecto
+      responses: 
+        '200': 
+          description: Una respuesta exitosa
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/Home'
   /hello:
     get: 
       summary: Holi, mundillo ;) 
@@ -17,7 +33,3 @@ paths:
             application/json: 
               schema: 
                 $ref: '#/components/schemas/HelloResponse'
-components: 
-  schemas: 
-    HelloResponse: 
-      type: string
